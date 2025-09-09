@@ -23,6 +23,9 @@
   </head>
 
   <body>
+  <%= link_to 'Login', login_path %>
+  <%= link_to 'logout', logout_path, data: {
+          turbo_method: :delete} %>
     <%= render 'layouts/messages' %>
 
     <%= yield %>
