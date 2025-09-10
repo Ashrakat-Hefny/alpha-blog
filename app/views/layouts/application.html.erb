@@ -22,6 +22,9 @@
       <%= link_to 'logout', logout_path, data: {
           turbo_method: :delete} %>
       <%= link_to current_user.username, user_path(current_user) %>
+      <%= link_to 'Delete your profile', user_path(current_user), data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"} %>
     <% else %>
       <%= link_to 'Login', login_path %>
       <%= link_to 'Signup', signup_path %>
