@@ -1,0 +1,22 @@
+<h1>CATEGORIES</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @category.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.created_at %></td>
+        <td><%= link_to 'Show', category_path(category)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  <%= link_to 'Create New Category', new_category_path %>
+</p>
